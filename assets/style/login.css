@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+}
+
+#container {
+}
+
+.background_image_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.background_image {
+  width: 100vw; /* Chiều rộng 100% của viewport */
+  height: 100vh; /* Chiều cao 100% của viewport */
+  overflow: hidden; /* Ngăn chặn scroll */
+  background: rgba(0, 0, 0, 1);
+}
+
+.background_image_overlay .background_image .background_image_animation {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden; /* Ngăn chặn scroll */
+  opacity: 0.5;
+}
+
+/* Form Log in */
+.form_login_container {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  border-radius: 12px;
+  background-color: #fff;
+  flex-shrink: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.form_login_logo {
+  text-align: center;
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  padding: 0 0 30px 0;
+}
+
+.form_login_separate {
+  content: "";
+  width: 80%;
+  background-color: #000;
+  height: 1px;
+  opacity: 0.5;
+}
+
+.form_login_content {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  padding: 20px 0 20px 0;
+}
+
+.form_login_email {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.form_login_email .email_field {
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  background: #efefed;
+  padding: 10px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  border: none;
+}
+
+.form_login_password {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.form_login_password .password_field {
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  background: #efefed;
+  padding: 10px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  border: none;
+}
+
+.form_login_remember_forgot_password {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#remember:hover {
+  cursor: pointer;
+}
+
+.form_login_remember {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_login_remember > span {
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.form_login_forgot {
+}
+
+.form_login_forgot > a {
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+}
+
+.form_login_forgot > a:hover {
+  cursor: pointer;
+  color: #f5221b;
+}
+
+.form_login_button {
+  width: 80%;
+  height: 50px;
+  background-color: #000;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 20px;
+  transition: 0.2s linear;
+}
+
+.form_login_button:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+  background-color: #f5221b;
+}
+
+.form_login_or {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.form_login_or_separate_left {
+  content: "";
+  width: 45%;
+  height: 1px;
+  background-color: #000;
+}
+
+.form_login_or > span {
+  width: 10%;
+  text-align: center;
+}
+
+.form_login_or_separate_right {
+  content: "";
+  width: 45%;
+  height: 1px;
+  background-color: #000;
+}
+
+.form_login_button_google {
+  width: 80%;
+  height: 50px;
+  background-color: #000;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 10px;
+  transition: 0.2s linear;
+}
+
+.form_login_button_google:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+  background-color: #f5221b;
+}
+
+.form_login_button_google_icon {
+  padding-right: 10px;
+}
+
+.form_login_create_account {
+  width: 80%;
+  margin-top: 30px;
+  display: inline-flex;
+  align-items: start;
+}
+
+.form_login_create_account a {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+
+.form_login_create_account a span {
+  text-decoration: none;
+  color: #f5221b;
+}
+
+.form_login_create_account span:hover {
+  cursor: pointer;
+  color: #f5221b;
+  transition: 0.1s linear;
+  opacity: 0.7;
+}

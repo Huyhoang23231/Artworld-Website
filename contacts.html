@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style/contacts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/Logo.jpg"
+      type="image/x-icon"
+    />
+    <title>Contacts</title>
+  </head>
+  <body>
+    <div id="container">
+      <!-- Sidebar -->
+      <div class="sidebar hidden" id="sidebar">
+        <input type="checkbox" id="sidebar-active" />
+        <label
+          for="sidebar-active"
+          class="sidebar_close"
+          onclick="closeSidebar()"
+        >
+          <!-- <i class="sidebar_close_icon bi bi-x-lg"></i> -->
+          <span>Close</span>
+        </label>
+
+        <div class="sidebar_avatar">
+          <img src="./assets/img/Avatar 4.svg" alt="Avatar" />
+          <span>Jonh Savik</span>
+        </div>
+
+        <ul class="sidebar_info_list">
+          <li class="sidebar_info_item">
+            <a href="#">Profile</a>
+          </li>
+          <li class="sidebar_info_item">
+            <a href="#">Cart</a>
+          </li>
+          <li class="sidebar_info_item">
+            <a href="#">Setting</a>
+          </li>
+        </ul>
+
+        <div class="sidebar_languages">
+          <p>EN <span>VN</span></p>
+        </div>
+
+        <div class="sidebar_info_contact">
+          <p>artworld@gmail.com <br />+84 0902123456<br /></p>
+        </div>
+
+        <div class="sidebar_logout">
+          <p>Log out</p>
+        </div>
+      </div>
+
+      <div class="sidebar_overlay" id="overlay" onclick="closeSidebar()"></div>
+
+      <!-- Header -->
+      <div id="header">
+        <div class="header_navbar">
+          <ul class="header_navbar_list">
+            <li class="header_navbar_item">
+              <a href="home.html">Home</a>
+            </li>
+            <li class="header_navbar_item">
+              <a href="shop.html">Shop</a>
+            </li>
+            <li class="header_navbar_item">
+              <a href="about.html">About</a>
+            </li>
+            <li class="header_navbar_item header_navbar_item_highlighted">
+              <a href="contacts.html">Contacts</a>
+            </li>
+          </ul>
+
+          <div class="header_navbar_menu">
+            <label
+              for="sidebar-active"
+              class="sidebar-open"
+              onclick="openSidebar()"
+            >
+              <i class="header_navbar_menu_icon bi bi-list"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div id="body">
+        <div class="body_typography">
+          <h1>ART <br />CONTACTS<br /></h1>
+        </div>
+
+        <div class="body_typography_content">
+          <h4>Let's keep in touch</h4>
+        </div>
+
+        <div class="body_form_container">
+          <div class="body_form_title">
+            <h3>Contact us</h3>
+          </div>
+
+          <div class="body_form_list">
+            <ul class="body_form_field">
+              <div class="body_form_field_name_phone">
+                <li class="body_form_field_item">
+                  <label for="name">NAME</label>
+                  <input type="text" class="custom_input" />
+                </li>
+                <li class="body_form_field_item">
+                  <label for="phone">PHONE NUMBER</label>
+                  <input type="text" class="custom_input" />
+                </li>
+              </div>
+              <div class="body_form_field_mail_budget">
+                <li class="body_form_field_item">
+                  <label for="email">EMAIL</label>
+                  <input type="email" class="custom_input" />
+                </li>
+                <li class="body_form_field_item">
+                  <label for="price">ART BUDGET SUGGESION</label>
+                  <button class="dropbtn" id="dropbtn">
+                    <span id="selectedValue"></span>
+                    <i class="dropbtn_icon bi bi-caret-down-fill"></i>
+                  </button>
+                  <div class="dropdown_content" id="stay_form">
+                    <a href="#stay_form" data-value="1.000.000 VND"
+                      >1.000.000 VND</a
+                    >
+                    <a href="#stay_form" data-value="2.000.000 VND"
+                      >2.000.000 VND</a
+                    >
+                    <a href="#stay_form" data-value="3.000.000 VND"
+                      >3.000.000 VND</a
+                    >
+                    <a href="#stay_form" data-value="4.000.000 VND"
+                      >4.000.000 VND</a
+                    >
+                    <a href="#stay_form" data-value="5.000.000 VND"
+                      >5.000.000 VND</a
+                    >
+                    <a href="#stay_form" data-value="Exchange">Exchange</a>
+                  </div>
+                </li>
+              </div>
+              <li class="body_form_field_item">
+                <label for="message">MESSENGER</label>
+                <input type="text" class="custom_input full_width_message" />
+              </li>
+
+              <div class="body_form_submit">
+                <span>SUBMIT</span>
+              </div>
+            </ul>
+
+            <div class="body_contacts_information">
+              <div class="body_contacts_address">
+                <p>123 Võ Văn Tần, P.13, TP.HCM <br />VIETNAM<br /></p>
+              </div>
+              <div class="body_contacts_phone">
+                <p>+84 0923189567</p>
+              </div>
+              <div class="body_contacts_email">
+                <p>artworld@gmail.com</p>
+              </div>
+              <div class="body_contacts_social">
+                <p>Có thể liên hệ chúng tôi qua</p>
+                <div class="body_contacts_social_bar">
+                  <div class="body_contacts_facebook">
+                    <i class="bi bi-facebook"></i>
+                  </div>
+                  <div class="body_contacts_instargram">
+                    <i class="bi bi-instagram"></i>
+                  </div>
+                  <div class="body_contacts_behance">
+                    <i class="bi bi-behance"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div id="footer">
+        <div class="footer_title">
+          <h3>Copyrighted by Huy Hoang - 2024</h3>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/contactfield.js"></script>
+  </body>
+</html>
